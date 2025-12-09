@@ -1,3 +1,11 @@
+import type { Metadata } from 'next';
+import './globals.css';  // <- This line is KEY for styles
+
+export const metadata: Metadata = {
+  title: 'PFU',
+  description: 'Streetwear drop 001',
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -5,7 +13,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-[#1a0006] antialiased">{children}</body>
+      <body>{children}</body>
     </html>
   )
 }
